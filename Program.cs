@@ -4,40 +4,61 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ConsoleApp123
+namespace nhanvien
 {
     internal class Program
     {
         static void Main(string[] args)
         {
-            Console.OutputEncoding = Encoding.UTF8;
-            PhanSo a = new PhanSo();
-            PhanSo b = new PhanSo();
-            PhanSo kq = new PhanSo();
-            Console.WriteLine("Nhập phân số thứ nhất");
-            a.nhap();
-            a.xuat(a.Tuso, a.Mauso);
-            Console.WriteLine("Nhập phân số thứ hai");
-            b.nhap();
-            b.xuat(b.Tuso, b.Mauso);
-            Console.WriteLine("Phân số sau khi được rút gọn là");
-            a.rutgon();
-            a.xuat(a.Tuso, a.Mauso);
-            b.rutgon();
-            b.xuat(b.Tuso, b.Mauso);
-            Console.WriteLine("Tổng hai phân số là");
-            kq = kq.congphanso(a, b);
-            kq.xuat(kq.Tuso, kq.Mauso);
-            Console.WriteLine("Hiệu hai phân số là");
-            kq = kq.truphanso(a, b);
-            kq.xuat(kq.Tuso, kq.Mauso);
-            Console.WriteLine("Tích hai phân số là");
-            kq = kq.nhanphanso(a, b);
-            kq.xuat(kq.Tuso, kq.Mauso);
-            Console.WriteLine("Thương hai phân số là");
-            kq = kq.chiaphanso(a, b);
-            kq.xuat(kq.Tuso, kq.Mauso);
-            Console.ReadLine();
+            private string hoten, diachi;
+        private int namsinh;
+        private double luongcb, heso, phucap;
+
+        public nhanvien()
+        {
+            hoten = "";
+            diachi = "";
+            namsinh = 0;
+            luongcb = 0;
+            heso = 0;
+            phucap = 0;
+
+
+        }
+
+        public void nhap()
+        {
+            Console.WriteLine("Nhập tên nhân viên");
+            hoten = Console.ReadLine();
+            Console.WriteLine("Nhập địa chỉ ");
+            diachi = Console.ReadLine();
+            Console.WriteLine("Nhập năm sinh");
+            namsinh = Int16.Parse(Console.ReadLine());
+            Console.WriteLine("Nhập lương cơ bản của nhân viên");
+            luongcb = double.Parse(Console.ReadLine());
+            Console.WriteLine("Nhập hệ số lương");
+            heso = double.Parse(Console.ReadLine());
+            Console.WriteLine("Nhập số phụ cấp");
+            phucap = double.Parse(Console.ReadLine());
+
+        }
+        public static double tongtien(double luongcb, double heso, double phucap)
+        {
+            double tongtien;
+            tongtien = luongcb * heso + phucap;
+            return tongtien;
+
+        }
+        public void xuat()
+        {
+            Console.WriteLine("Họ và tên của nhân viên là: {0}:", hoten);
+            Console.WriteLine(" Địa chỉ của {0} là: {1}", hoten, diachi);
+            Console.WriteLine("Năm sinh của {0} là : {1}", hoten, namsinh);
+            Console.WriteLine("Lương cơ bản của {0} là {1} :", hoten, luongcb);
+            Console.WriteLine("Hệ số lương của {0} là : {1}", hoten, heso);
+            Console.WriteLine(" Phụ cấp của {0} là : {1}", hoten, phucap);
+            Console.WriteLine("Tiền lương được nhận là: {0}", tongtien(luongcb, heso, phucap));
+
         }
     }
 }

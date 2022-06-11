@@ -174,6 +174,7 @@
             this.Đóng.TabIndex = 13;
             this.Đóng.Text = "Đóng";
             this.Đóng.UseVisualStyleBackColor = true;
+            this.Đóng.Click += new System.EventHandler(this.Đóng_Click);
             // 
             // btnThem
             // 

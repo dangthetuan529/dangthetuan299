@@ -129,11 +129,11 @@
             // dataGridViewHSM
             // 
             this.dataGridViewHSM.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewHSM.Location = new System.Drawing.Point(451, 14);
+            this.dataGridViewHSM.Location = new System.Drawing.Point(451, 25);
             this.dataGridViewHSM.Name = "dataGridViewHSM";
             this.dataGridViewHSM.RowHeadersWidth = 62;
             this.dataGridViewHSM.RowTemplate.Height = 28;
-            this.dataGridViewHSM.Size = new System.Drawing.Size(556, 262);
+            this.dataGridViewHSM.Size = new System.Drawing.Size(543, 276);
             this.dataGridViewHSM.TabIndex = 10;
             this.dataGridViewHSM.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewHSM_CellClick);
             this.dataGridViewHSM.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewHSM_CellContentClick);

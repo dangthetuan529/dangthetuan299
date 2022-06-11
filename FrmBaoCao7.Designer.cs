@@ -228,6 +228,7 @@
             this.btnIn.TabIndex = 15;
             this.btnIn.Text = "In";
             this.btnIn.UseVisualStyleBackColor = true;
+            this.btnIn.Click += new System.EventHandler(this.btnIn_Click);
             // 
             // txtDT
             // 
@@ -240,7 +241,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1016, 625);
+            this.ClientSize = new System.Drawing.Size(1047, 625);
             this.Controls.Add(this.txtDT);
             this.Controls.Add(this.btnIn);
             this.Controls.Add(this.btnLamLai);

@@ -150,6 +150,7 @@
             this.mãThẻToolStripMenuItem1.Name = "mãThẻToolStripMenuItem1";
             this.mãThẻToolStripMenuItem1.Size = new System.Drawing.Size(480, 34);
             this.mãThẻToolStripMenuItem1.Text = "Danh sách các sách đang được mượn chưa trả";
+       
             // 
             // tsDanhSachHSMtheoTM
             // 

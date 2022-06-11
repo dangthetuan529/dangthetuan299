@@ -210,7 +210,22 @@ namespace BTL_Nhom1
 
         private void btnDong9_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            DialogResult dlg = new DialogResult();
+            dlg = MessageBox.Show("Bạn có muốn thoát?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (dlg == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
+        }
+
+        private void Đóng_Click(object sender, EventArgs e)
+        {
+            DialogResult dlg = new DialogResult();
+            dlg = MessageBox.Show("Bạn có muốn thoát?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (dlg == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
         }
     }
 }

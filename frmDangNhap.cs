@@ -20,9 +20,16 @@ namespace BTL_Nhom1
 
         private void btnThoat_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show(" Ban co muon thoat khong ?",
+           /* if (MessageBox.Show(" Ban co muon thoat khong ?",
                "canh bao !", MessageBoxButtons.OKCancel) == DialogResult.OK) ;
-            Application.Exit();
+            Application.Exit();*/
+            DialogResult dlg = new DialogResult();
+            dlg = MessageBox.Show("Bạn có muốn thoát?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (dlg == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
+
         }
 
    
@@ -75,6 +82,17 @@ namespace BTL_Nhom1
         private void txtTenDangNhap_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        
+
+        private void textBox1_Click(object sender, EventArgs e)
+        {
+            if (txtMatKhau.PasswordChar == '*')
+            {
+                //textBox1.BringToFont();
+                txtMatKhau.PasswordChar = '\0';
+            }
         }
     }
 }

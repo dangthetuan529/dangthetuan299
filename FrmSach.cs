@@ -39,6 +39,14 @@ namespace BTL_Nhom1
             DataTable Sach = new DataTable();
             Sach = Funtions.LoadDataToTable(sql);
             dataGridViewS.DataSource = Sach;
+
+            string[] Header = new string[14] { "MaSach", "TenSach", "TenTG", "NamXB", "KhoSach", "GiaSach", "LanTaiBan", "SoTrang","TomTatND","SoLuong","DonGiaThue","MaNgonNgu","MaTheLoai","MaNXB" };
+            for (int i = 0; i < Header.Length; i++)
+            {
+                dataGridViewS.Columns[i].HeaderText = Header[i];
+            }
+            dataGridViewS.AllowUserToAddRows = false;
+            dataGridViewS.EditMode = DataGridViewEditMode.EditProgrammatically;
         }
        
 
@@ -62,7 +70,8 @@ namespace BTL_Nhom1
             txtMaSach7.Text = dataGridViewS.CurrentRow.Cells[0].Value.ToString();
             txtTenSach7.Text = dataGridViewS.CurrentRow.Cells[1].Value.ToString();
             txtTenTG7.Text = dataGridViewS.CurrentRow.Cells[2].Value.ToString();
-            txtNamXB7.Text = dataGridViewS.CurrentRow.Cells[3].Value.ToString();
+           // txtNamXB7.Text = dataGridViewS.CurrentRow.Cells[3].Value.ToString();
+            txtNamXB7.Text = Funtions.ConvertDateTime(dataGridViewS.CurrentRow.Cells[3].Value.ToString());
             txtKhoSach7.Text = dataGridViewS.CurrentRow.Cells[4].Value.ToString();
             txtGiaSach7.Text = dataGridViewS.CurrentRow.Cells[5].Value.ToString();
             txtLanTaiBan7.Text = dataGridViewS.CurrentRow.Cells[6].Value.ToString();
@@ -96,7 +105,7 @@ namespace BTL_Nhom1
                 txtTenTG7.Focus();
                 return;
             }
-            if (txtNamXB7.Text.Trim() == "")
+            if (txtNamXB7.Text.Trim() == "  /  /  ")
             {
                 MessageBox.Show("Bạn phải nhập năm xuất bản ", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 txtNamXB7.Focus();
@@ -201,7 +210,7 @@ namespace BTL_Nhom1
 
         private void btnXoa_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("Ban co muon xoa khong?", "Thong bao", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            if (MessageBox.Show("Bạn có muốn xóa không?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 try
                 {
@@ -214,7 +223,7 @@ namespace BTL_Nhom1
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("Xoa khong thanh cong!" + ex.Message);
+                    MessageBox.Show("Xóa không thành công!" + ex.Message);
                 }
             }
         }
@@ -240,14 +249,14 @@ namespace BTL_Nhom1
 
             if (txtMaSach7.Text.Trim() == "")
             {
-                MessageBox.Show("Chua chon ban ghi nao");
+                MessageBox.Show("Chưa chọn bản ghi nào");
                 txtMaSach7.Focus();
                 return;
             }
 
             if (txtTenSach7.Text.Trim() == "")
             {
-                MessageBox.Show("Chua nhap ten sach");
+                MessageBox.Show("Chưa nhập tên sách");
                 txtTenSach7.Focus();
                 return;
             }
@@ -384,6 +393,16 @@ namespace BTL_Nhom1
         private void btnDong_Click(object sender, EventArgs e)
         {
             this.Hide();
+        }
+
+        private void txtNamXB7_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dataGridViewS_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

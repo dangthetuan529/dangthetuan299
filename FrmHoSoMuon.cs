@@ -217,7 +217,12 @@ namespace BTL_Nhom1
 
         private void btnDong_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            DialogResult dlg = new DialogResult();
+            dlg = MessageBox.Show("Bạn có muốn thoát?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (dlg == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
         }
 
         private void btnBoQua_Click(object sender, EventArgs e)
@@ -275,7 +280,12 @@ namespace BTL_Nhom1
 
         private void btnDong7_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            DialogResult dlg = new DialogResult();
+            dlg = MessageBox.Show("Bạn có muốn thoát?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (dlg == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
         }
 
         private void btnBoqua7_Click(object sender, EventArgs e)

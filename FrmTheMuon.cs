@@ -39,7 +39,12 @@ namespace BTL_Nhom1
 
         private void btnDong_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            DialogResult dlg = new DialogResult();
+            dlg = MessageBox.Show("Bạn có muốn thoát?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (dlg == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
         }
         private void Reset_Values()
         {
@@ -89,7 +94,7 @@ namespace BTL_Nhom1
             
             if (txtMaThe4.Text == "")
             {
-                MessageBox.Show("Bạn phải nhập mã the", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Bạn phải nhập mã thẻ", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 txtMaThe4.Focus();
                 return;
             }

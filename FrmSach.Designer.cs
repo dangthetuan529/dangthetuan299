@@ -62,7 +62,8 @@
             this.btnBoQua = new System.Windows.Forms.Button();
             this.btnDong = new System.Windows.Forms.Button();
             this.dataGridViewS = new System.Windows.Forms.DataGridView();
-            this.txtNamXB7 = new System.Windows.Forms.DateTimePicker();
+            this.txtNamXB7 = new System.Windows.Forms.TextBox();
+            this.mskNamXB7 = new System.Windows.Forms.MaskedTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewS)).BeginInit();
             this.SuspendLayout();
             // 
@@ -79,7 +80,7 @@
             // 
             this.txtMaSach7.Location = new System.Drawing.Point(130, 61);
             this.txtMaSach7.Name = "txtMaSach7";
-            this.txtMaSach7.Size = new System.Drawing.Size(100, 26);
+            this.txtMaSach7.Size = new System.Drawing.Size(88, 26);
             this.txtMaSach7.TabIndex = 1;
             // 
             // label2
@@ -203,14 +204,14 @@
             // 
             this.txtTenSach7.Location = new System.Drawing.Point(130, 119);
             this.txtTenSach7.Name = "txtTenSach7";
-            this.txtTenSach7.Size = new System.Drawing.Size(100, 26);
+            this.txtTenSach7.Size = new System.Drawing.Size(88, 26);
             this.txtTenSach7.TabIndex = 15;
             // 
             // txtTenTG7
             // 
             this.txtTenTG7.Location = new System.Drawing.Point(130, 173);
             this.txtTenTG7.Name = "txtTenTG7";
-            this.txtTenTG7.Size = new System.Drawing.Size(100, 26);
+            this.txtTenTG7.Size = new System.Drawing.Size(88, 26);
             this.txtTenTG7.TabIndex = 16;
             // 
             // txtGiaSach7
@@ -356,20 +357,32 @@
             this.dataGridViewS.Size = new System.Drawing.Size(498, 487);
             this.dataGridViewS.TabIndex = 34;
             this.dataGridViewS.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewS_CellClick);
+            this.dataGridViewS.Click += new System.EventHandler(this.dataGridViewS_Click);
             // 
             // txtNamXB7
             // 
-            this.txtNamXB7.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.txtNamXB7.Location = new System.Drawing.Point(301, 273);
+            this.txtNamXB7.Location = new System.Drawing.Point(130, 237);
             this.txtNamXB7.Name = "txtNamXB7";
-            this.txtNamXB7.Size = new System.Drawing.Size(121, 26);
-            this.txtNamXB7.TabIndex = 35;
+            this.txtNamXB7.Size = new System.Drawing.Size(88, 26);
+            this.txtNamXB7.TabIndex = 37;
+            this.txtNamXB7.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // mskNamXB7
+            // 
+            this.mskNamXB7.Location = new System.Drawing.Point(236, 36);
+            this.mskNamXB7.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.mskNamXB7.Mask = "00/00/0000";
+            this.mskNamXB7.Name = "mskNamXB7";
+            this.mskNamXB7.Size = new System.Drawing.Size(121, 26);
+            this.mskNamXB7.TabIndex = 38;
+            this.mskNamXB7.ValidatingType = typeof(System.DateTime);
             // 
             // FrmSach
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1094, 633);
+            this.Controls.Add(this.mskNamXB7);
             this.Controls.Add(this.txtNamXB7);
             this.Controls.Add(this.dataGridViewS);
             this.Controls.Add(this.btnDong);
@@ -450,6 +463,7 @@
         private System.Windows.Forms.Button btnBoQua;
         private System.Windows.Forms.Button btnDong;
         private System.Windows.Forms.DataGridView dataGridViewS;
-        private System.Windows.Forms.DateTimePicker txtNamXB7;
+        private System.Windows.Forms.TextBox txtNamXB7;
+        private System.Windows.Forms.MaskedTextBox mskNamXB7;
     }
 }

@@ -19,10 +19,12 @@ namespace BTL_Nhom1
 
         private void btnDangXuat_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show(" Ban co muon thoat khong ?",
-                 "canh bao !", MessageBoxButtons.OKCancel) == DialogResult.OK) ;
-            Application.Exit();
-            Funtions.Close();
+            DialogResult dlg = new DialogResult();
+            dlg = MessageBox.Show("Bạn có đăng xuất khỏi trái đất không ?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (dlg == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
         }
 
         private void tsSach_Click(object sender, EventArgs e)
@@ -66,5 +68,7 @@ namespace BTL_Nhom1
             FrmBaoCao9 frm = new FrmBaoCao9();
             frm.ShowDialog();
         }
+
+        
     }
 }

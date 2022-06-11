@@ -35,6 +35,9 @@
             this.cbMaTheMuonBC = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.contextMenuStrip2 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.btnLamLai = new System.Windows.Forms.Button();
+            this.btnIn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewHSMtheoTM)).BeginInit();
             this.SuspendLayout();
             // 
@@ -54,7 +57,7 @@
             this.dataGridViewHSMtheoTM.Name = "dataGridViewHSMtheoTM";
             this.dataGridViewHSMtheoTM.RowHeadersWidth = 62;
             this.dataGridViewHSMtheoTM.RowTemplate.Height = 28;
-            this.dataGridViewHSMtheoTM.Size = new System.Drawing.Size(776, 262);
+            this.dataGridViewHSMtheoTM.Size = new System.Drawing.Size(796, 262);
             this.dataGridViewHSMtheoTM.TabIndex = 2;
             this.dataGridViewHSMtheoTM.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewHSMtheoTM_CellContentClick);
             // 
@@ -94,11 +97,40 @@
             this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
             this.contextMenuStrip1.Opening += new System.ComponentModel.CancelEventHandler(this.contextMenuStrip1_Opening);
             // 
+            // contextMenuStrip2
+            // 
+            this.contextMenuStrip2.ImageScalingSize = new System.Drawing.Size(24, 24);
+            this.contextMenuStrip2.Name = "contextMenuStrip2";
+            this.contextMenuStrip2.Size = new System.Drawing.Size(61, 4);
+            this.contextMenuStrip2.Opening += new System.ComponentModel.CancelEventHandler(this.contextMenuStrip2_Opening);
+            // 
+            // btnLamLai
+            // 
+            this.btnLamLai.Location = new System.Drawing.Point(572, 119);
+            this.btnLamLai.Name = "btnLamLai";
+            this.btnLamLai.Size = new System.Drawing.Size(100, 32);
+            this.btnLamLai.TabIndex = 15;
+            this.btnLamLai.Text = "Làm Lại";
+            this.btnLamLai.UseVisualStyleBackColor = true;
+            this.btnLamLai.Click += new System.EventHandler(this.btnLamLai_Click);
+            // 
+            // btnIn
+            // 
+            this.btnIn.Location = new System.Drawing.Point(710, 119);
+            this.btnIn.Name = "btnIn";
+            this.btnIn.Size = new System.Drawing.Size(92, 32);
+            this.btnIn.TabIndex = 16;
+            this.btnIn.Text = "In";
+            this.btnIn.UseVisualStyleBackColor = true;
+            this.btnIn.Click += new System.EventHandler(this.btnIn_Click);
+            // 
             // FrmBaoCao9
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1084, 526);
+            this.Controls.Add(this.btnIn);
+            this.Controls.Add(this.btnLamLai);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.cbMaTheMuonBC);
             this.Controls.Add(this.btnTimKiemBC);
@@ -121,5 +153,8 @@
         private System.Windows.Forms.ComboBox cbMaTheMuonBC;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip2;
+        private System.Windows.Forms.Button btnLamLai;
+        private System.Windows.Forms.Button btnIn;
     }
 }

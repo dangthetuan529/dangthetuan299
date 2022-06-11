@@ -73,7 +73,7 @@
             // 
             this.btnDangNhap.BackColor = System.Drawing.Color.Transparent;
             this.btnDangNhap.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDangNhap.Location = new System.Drawing.Point(279, 315);
+            this.btnDangNhap.Location = new System.Drawing.Point(318, 357);
             this.btnDangNhap.Name = "btnDangNhap";
             this.btnDangNhap.Size = new System.Drawing.Size(133, 37);
             this.btnDangNhap.TabIndex = 5;
@@ -85,7 +85,7 @@
             // 
             this.btnThoat.BackColor = System.Drawing.Color.Transparent;
             this.btnThoat.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnThoat.Location = new System.Drawing.Point(575, 315);
+            this.btnThoat.Location = new System.Drawing.Point(630, 357);
             this.btnThoat.Name = "btnThoat";
             this.btnThoat.Size = new System.Drawing.Size(122, 37);
             this.btnThoat.TabIndex = 7;
